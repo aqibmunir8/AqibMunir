@@ -1,0 +1,314 @@
+- generic [ref=f1e3]:
+  - banner [ref=f1e4]:
+    - navigation [ref=f1e5]:
+      - link "AM Aqib Munir Creative Tech" [ref=f1e6] [cursor=pointer]:
+        - /url: "#home"
+        - generic [ref=f1e7]: AM
+        - generic [ref=f1e8]: Aqib Munir
+        - generic [ref=f1e9]: Creative Tech
+      - generic [ref=f1e10]:
+        - link "Home" [ref=f1e11] [cursor=pointer]:
+          - /url: "#home"
+        - link "Selected Work" [ref=f1e12] [cursor=pointer]:
+          - /url: "#work"
+        - link "Skills & Stack" [ref=f1e13] [cursor=pointer]:
+          - /url: "#about"
+        - link "Process" [ref=f1e14] [cursor=pointer]:
+          - /url: "#services"
+        - link "Contact" [ref=f1e15] [cursor=pointer]:
+          - /url: "#contact"
+      - link "Hire Me" [ref=f1e17] [cursor=pointer]:
+        - /url: "#contact"
+  - main [ref=f1e22]:
+    - generic [ref=f1e23]:
+      - generic [ref=f1e24]: Available for Q2/Q3 Freelance & Client Projects
+      - heading "Turning complex code into beautiful, brand-driven web experiences." [level=1] [ref=f1e29]
+      - paragraph [ref=f1e30]: I engineer bespoke digital platforms, conversion-focused websites, and high-velocity web applications that help ambitious founders and businesses dominate their market.
+      - generic [ref=f1e31]:
+        - link "Explore Client Work" [ref=f1e32] [cursor=pointer]:
+          - /url: "#work"
+        - link "Start a Project" [ref=f1e36] [cursor=pointer]:
+          - /url: "#contact"
+      - generic [ref=f1e41]:
+        - generic [ref=f1e42]:
+          - generic [ref=f1e43]: 99/100
+          - generic [ref=f1e44]: Avg. Lighthouse Score
+          - generic [ref=f1e45]: Zero layout shift, instant TTI
+        - generic [ref=f1e46]:
+          - generic [ref=f1e47]: 3.2x
+          - generic [ref=f1e48]: Client Lead Velocity
+          - generic [ref=f1e49]: Measurable conversion lift
+        - generic [ref=f1e50]:
+          - generic [ref=f1e51]: Next.js 15
+          - generic [ref=f1e52]: Engineering Stack
+          - generic [ref=f1e53]: React 19 + TypeScript + Tailwind
+        - generic [ref=f1e54]:
+          - generic [ref=f1e55]: 100%
+          - generic [ref=f1e56]: Client Satisfaction
+          - generic [ref=f1e57]: Bespoke design, zero template slop
+    - generic [ref=f1e58]:
+      - generic [ref=f1e59]:
+        - generic [ref=f1e60]:
+          - generic [ref=f1e61]: Featured Client Deployments
+          - heading "Engineered for conversion & prestige." [level=2] [ref=f1e66]
+        - paragraph [ref=f1e67]: "Every project is custom architected from zero: bespoke brand identity, fluid micro-interactions, and blazing performance."
+      - generic [ref=f1e68]:
+        - generic [ref=f1e69] [cursor=pointer]:
+          - generic [ref=f1e71]:
+            - generic [ref=f1e72]:
+              - generic [ref=f1e73]:
+                - generic [ref=f1e74]:
+                  - generic [ref=f1e75]: kuro-omakase.production.app
+                  - generic [ref=f1e80]: Two Michelin Stars (2025)
+                - generic [ref=f1e81]:
+                  - generic [ref=f1e88]: KURO (黒)
+                  - generic [ref=f1e89]: Michelin-Caliber Omakase Digital Dining Sanctuary
+                - generic [ref=f1e90]:
+                  - generic [ref=f1e91]: Zero Layout Shift (CLS < 0.02)
+                  - generic [ref=f1e96]: /assets/kuro-preview.webp
+                - img "KURO (黒)" [ref=f1e102]
+              - link "Open Live Website" [ref=f1e103]:
+                - /url: https://kuro-artisanal-omakase.vercel.app
+            - generic [ref=f1e108]: Luxury Hospitality / Web Experience
+            - heading "KURO (黒)" [level=3] [ref=f1e116]
+            - paragraph [ref=f1e117]: Michelin-Caliber Omakase Digital Dining Sanctuary
+            - paragraph [ref=f1e118]: An immersive digital sanctuary for an exclusive 12-seat culinary journey in SoHo, NYC. Built to translate raw granite, charred cedar Shou Sugi Ban, and 1,000°C Kishu Binchotan firecraft into a contemplative web experience.
+            - generic [ref=f1e119]:
+              - generic [ref=f1e120]:
+                - generic [ref=f1e121]: +240%
+                - generic [ref=f1e122]: Booking Conversion
+              - generic [ref=f1e123]:
+                - generic [ref=f1e124]: 99/100
+                - generic [ref=f1e125]: Lighthouse Performance
+              - generic [ref=f1e126]:
+                - generic [ref=f1e127]: 3m 42s
+                - generic [ref=f1e128]: Avg Session Duration
+          - generic [ref=f1e129]:
+            - generic [ref=f1e130]:
+              - generic [ref=f1e131]: Next.js
+              - generic [ref=f1e132]: Tailwind CSS
+              - generic [ref=f1e133]: Framer Motion
+              - generic [ref=f1e134]: Interactive Reservation
+            - generic [ref=f1e135]:
+              - generic [ref=f1e136]: Interactive Case Study & Architecture
+              - generic [ref=f1e141]: Details →
+        - generic [ref=f1e142] [cursor=pointer]:
+          - generic [ref=f1e144]:
+            - generic [ref=f1e145]:
+              - generic [ref=f1e146]:
+                - generic [ref=f1e147]:
+                  - generic [ref=f1e148]: vanguard-dallas.production.app
+                  - generic [ref=f1e153]: GAF Master Elite® • Top 2% US
+                - generic [ref=f1e154]:
+                  - generic [ref=f1e160]: Vanguard Dallas
+                  - generic [ref=f1e161]: High-Impact Exterior Contracting & Insurance Claim Engine
+                - generic [ref=f1e162]:
+                  - generic [ref=f1e163]: Zero Layout Shift (CLS < 0.02)
+                  - generic [ref=f1e168]: /assets/vanguard-preview.webp
+                - img "Vanguard Dallas" [ref=f1e174]
+              - link "Open Live Website" [ref=f1e175]:
+                - /url: https://vanguard-dallas-five.vercel.app
+            - generic [ref=f1e180]: Commercial Enterprise & Lead Engine
+            - heading "Vanguard Dallas" [level=3] [ref=f1e187]
+            - paragraph [ref=f1e188]: High-Impact Exterior Contracting & Insurance Claim Engine
+            - paragraph [ref=f1e189]: A robust lead-generation and conversion machine for Texas’s premier roofing & storm restoration contractor. Combines interactive storm diagnostics, damage sliders, and instant quote calculators.
+            - generic [ref=f1e190]:
+              - generic [ref=f1e191]:
+                - generic [ref=f1e192]: 3.2x
+                - generic [ref=f1e193]: Qualified Inbounds
+              - generic [ref=f1e194]:
+                - generic [ref=f1e195]: 4m 15s
+                - generic [ref=f1e196]: Interactive Dwell Time
+              - generic [ref=f1e197]:
+                - generic [ref=f1e198]: 41.8%
+                - generic [ref=f1e199]: Lead Form Completion
+          - generic [ref=f1e200]:
+            - generic [ref=f1e201]:
+              - generic [ref=f1e202]: React
+              - generic [ref=f1e203]: Interactive Cost Estimator
+              - generic [ref=f1e204]: Hail Risk Quiz
+              - generic [ref=f1e205]: Before/After Slider
+            - generic [ref=f1e206]:
+              - generic [ref=f1e207]: Interactive Case Study & Architecture
+              - generic [ref=f1e212]: Details →
+        - generic [ref=f1e213] [cursor=pointer]:
+          - generic [ref=f1e215]:
+            - generic [ref=f1e216]:
+              - generic [ref=f1e217]:
+                - generic [ref=f1e218]:
+                  - generic [ref=f1e219]: maison-co.production.app
+                  - generic [ref=f1e224]: 3x Daily Drops • 48h Wild Ferment
+                - generic [ref=f1e225]:
+                  - generic [ref=f1e229]: Maison & Co.
+                  - generic [ref=f1e230]: Apple-Grade All-Day Boulangerie & Gastronomy House
+                - generic [ref=f1e231]:
+                  - generic [ref=f1e232]: Zero Layout Shift (CLS < 0.02)
+                  - generic [ref=f1e237]: /assets/maison-preview.webp
+                - img "Maison & Co." [ref=f1e243]
+              - link "Open Live Website" [ref=f1e244]:
+                - /url: https://maison-co-six.vercel.app
+            - generic [ref=f1e249]: Artisanal Food & Beverage / Direct Ordering
+            - heading "Maison & Co." [level=3] [ref=f1e254]
+            - paragraph [ref=f1e255]: Apple-Grade All-Day Boulangerie & Gastronomy House
+            - paragraph [ref=f1e256]: A modern European culinary platform spanning dawn artisan bread drops, specialty light-roast coffee, and evening wood-fired brasserie dining with 150+ biodynamic wine cellar bookings.
+            - generic [ref=f1e257]:
+              - generic [ref=f1e258]:
+                - generic [ref=f1e259]: +185%
+                - generic [ref=f1e260]: Digital Order Volume
+              - generic [ref=f1e261]:
+                - generic [ref=f1e262]: 0.8s
+                - generic [ref=f1e263]: Page Speed Index
+              - generic [ref=f1e264]:
+                - generic [ref=f1e265]: 64%
+                - generic [ref=f1e266]: Repeat Customer Rate
+          - generic [ref=f1e267]:
+            - generic [ref=f1e268]:
+              - generic [ref=f1e269]: Next.js
+              - generic [ref=f1e270]: Direct Allocation Queue
+              - generic [ref=f1e271]: Wine Cellar Matrix
+              - generic [ref=f1e272]: Framer Motion
+            - generic [ref=f1e273]:
+              - generic [ref=f1e274]: Interactive Case Study & Architecture
+              - generic [ref=f1e279]: Details →
+        - generic [ref=f1e280] [cursor=pointer]:
+          - generic [ref=f1e282]:
+            - generic [ref=f1e283]:
+              - generic [ref=f1e284]:
+                - generic [ref=f1e285]:
+                  - generic [ref=f1e286]: ember-hearth.production.app
+                  - generic [ref=f1e291]: 1,800m Shade-Grown • Direct Trade
+                - generic [ref=f1e292]:
+                  - generic [ref=f1e296]: Ember & Hearth
+                  - generic [ref=f1e297]: Direct-Trade Specialty Roastery & Culinary Table
+                - generic [ref=f1e298]:
+                  - generic [ref=f1e299]: Zero Layout Shift (CLS < 0.02)
+                  - generic [ref=f1e304]: /assets/ember-preview.webp
+                - img "Ember & Hearth" [ref=f1e310]
+              - link "Open Live Website" [ref=f1e311]:
+                - /url: https://emberandhearth.netlify.app
+            - generic [ref=f1e316]: Specialty Coffee / Experience Booking
+            - heading "Ember & Hearth" [level=3] [ref=f1e321]
+            - paragraph [ref=f1e322]: Direct-Trade Specialty Roastery & Culinary Table
+            - paragraph [ref=f1e323]: A warm, sensory-driven web presence for direct-trade small-batch coffee roasting and wood-fired baking. Features cupping flight bookings, roaster immersion experiences, and bean subscription flows.
+            - generic [ref=f1e324]:
+              - generic [ref=f1e325]:
+                - generic [ref=f1e326]: 1,200+
+                - generic [ref=f1e327]: Active Subscribers
+              - generic [ref=f1e328]:
+                - generic [ref=f1e329]: 100/100
+                - generic [ref=f1e330]: Mobile Usability Score
+              - generic [ref=f1e331]:
+                - generic [ref=f1e332]: "-38%"
+                - generic [ref=f1e333]: Checkout Abandonment
+          - generic [ref=f1e334]:
+            - generic [ref=f1e335]:
+              - generic [ref=f1e336]: React
+              - generic [ref=f1e337]: Coffee Flight Booker
+              - generic [ref=f1e338]: Subscription Engine
+              - generic [ref=f1e339]: Tailwind CSS
+            - generic [ref=f1e340]:
+              - generic [ref=f1e341]: Interactive Case Study & Architecture
+              - generic [ref=f1e346]: Details →
+    - generic [ref=f1e348]:
+      - generic [ref=f1e349]:
+        - generic [ref=f1e350]: Engineering Philosophy
+        - heading "Crafting interfaces where design and code never compromise." [level=2] [ref=f1e356]
+        - paragraph [ref=f1e357]: Most websites look like generic templates or crawl under bloated dependencies. I build at the exact intersection of high-tier aesthetic design and clean, scalable code.
+        - generic [ref=f1e358]:
+          - generic [ref=f1e363]:
+            - generic [ref=f1e364]: Full Brand Alignment
+            - generic [ref=f1e365]: Every line of styling reinforces your luxury, authority, or SaaS identity.
+          - generic [ref=f1e370]:
+            - generic [ref=f1e371]: Lighthouse 95+ Standard
+            - generic [ref=f1e372]: Zero layout shift (CLS < 0.05), responsive image pipelines, edge CDN ready.
+          - generic [ref=f1e377]:
+            - generic [ref=f1e378]: Interactive Revenue Engines
+            - generic [ref=f1e379]: Dynamic price calculators, reservation calendars, and custom quizzes.
+      - generic [ref=f1e380]:
+        - generic [ref=f1e382]:
+          - heading "Frontend & Creative Tech" [level=3] [ref=f1e388]
+          - generic [ref=f1e389]:
+            - generic [ref=f1e390]: React / Next.js 15
+            - generic [ref=f1e391]: TypeScript
+            - generic [ref=f1e392]: Tailwind CSS v4
+            - generic [ref=f1e393]: Framer Motion
+            - generic [ref=f1e394]: WebGL / Three.js
+            - generic [ref=f1e395]: GSAP Animation
+            - generic [ref=f1e396]: HTML5 Canvas
+            - generic [ref=f1e397]: Responsive Architecture
+        - generic [ref=f1e399]:
+          - heading "Full-Stack & Backend Systems" [level=3] [ref=f1e404]
+          - generic [ref=f1e405]:
+            - generic [ref=f1e406]: Node.js & Express
+            - generic [ref=f1e407]: PostgreSQL / Supabase
+            - generic [ref=f1e408]: REST & GraphQL APIs
+            - generic [ref=f1e409]: Prisma ORM
+            - generic [ref=f1e410]: Server Actions
+            - generic [ref=f1e411]: Redis Caching
+            - generic [ref=f1e412]: Authentication (OAuth/JWT)
+            - generic [ref=f1e413]: Stripe Payments
+        - generic [ref=f1e415]:
+          - heading "Performance & Engineering Discipline" [level=3] [ref=f1e420]
+          - generic [ref=f1e421]:
+            - generic [ref=f1e422]: Core Web Vitals Mastery
+            - generic [ref=f1e423]: Zero Layout Shift (CLS < 0.05)
+            - generic [ref=f1e424]: Lighthouse 95+ Auditing
+            - generic [ref=f1e425]: SEO & OpenGraph Architecture
+            - generic [ref=f1e426]: Accessibility (WCAG 2.2 AA)
+            - generic [ref=f1e427]: Automated CI/CD Pipelines
+        - generic [ref=f1e429]:
+          - heading "Client Delivery & Brand Strategy" [level=3] [ref=f1e433]
+          - generic [ref=f1e434]:
+            - generic [ref=f1e435]: High-Converting UI/UX
+            - generic [ref=f1e436]: Interactive Calculators & Tools
+            - generic [ref=f1e437]: Design System Architecture
+            - generic [ref=f1e438]: Micro-Interactions
+            - generic [ref=f1e439]: Rapid MVP Prototyping
+            - generic [ref=f1e440]: Lead Generation Funnels
+    - generic [ref=f1e441]:
+      - generic [ref=f1e442]:
+        - generic [ref=f1e443]: How We Work Together
+        - heading "From whiteboard concept to production launch." [level=2] [ref=f1e447]
+        - paragraph [ref=f1e448]: A structured, transparent delivery pipeline with zero fluff, rapid iterations, and relentless attention to detail.
+      - generic [ref=f1e449]:
+        - generic [ref=f1e451]:
+          - generic [ref=f1e452]: "01"
+          - heading "Brand Vision & Technical Discovery" [level=3] [ref=f1e453]
+          - paragraph [ref=f1e454]: We dissect your core value proposition, audience psychology, and business objectives. We architect the visual direction, interactive hooks, and conversion flow before writing a line of code.
+        - generic [ref=f1e456]:
+          - generic [ref=f1e457]: "02"
+          - heading "High-Fidelity Prototyping & Motion Design" [level=3] [ref=f1e458]
+          - paragraph [ref=f1e459]: We sculpt fluid, bespoke interfaces using modern design systems, micro-interactions, and responsive layouts that match the prestige of top-tier venture-backed brands.
+        - generic [ref=f1e461]:
+          - generic [ref=f1e462]: "03"
+          - heading "Full-Stack Engineering & Zero-Jank Polish" [level=3] [ref=f1e463]
+          - paragraph [ref=f1e464]: Production-ready code built with Next.js, React, TypeScript, and Tailwind. Optimized for 60fps animations, instant interactions, and strict accessibility.
+        - generic [ref=f1e466]:
+          - generic [ref=f1e467]: "04"
+          - heading "Performance Audit, Launch & Conversion" [level=3] [ref=f1e468]
+          - paragraph [ref=f1e469]: Comprehensive Lighthouse audit, SEO meta tags, Core Web Vitals optimization, and deployment to high-availability edge networks with zero downtime.
+    - generic [ref=f1e472]:
+      - generic [ref=f1e473]:
+        - generic [ref=f1e474]:
+          - generic [ref=f1e475]: Let's Build Something Exceptional
+          - heading "Have a project in mind?" [level=2] [ref=f1e480]
+          - paragraph [ref=f1e481]: Tell me about your product vision, timeline, or redesign requirements. I typically reply within 12 hours with a clear proposal and execution plan.
+          - button "contact@aqibmunir.dev Copy" [ref=f1e483]:
+            - generic [ref=f1e484]: contact@aqibmunir.dev
+            - generic [ref=f1e489]: Copy
+        - generic [ref=f1e490]:
+          - generic [ref=f1e491]: 📍 Worldwide Remote / Timezone Flexible
+          - generic [ref=f1e492]: ⚡ Direct 1-on-1 Engineering (No agency middleman)
+      - generic [ref=f1e593]:
+        - heading "Message Received!" [level=3] [ref=f1e598]
+        - paragraph [ref=f1e599]: Thank you for reaching out, Sarah Jenkins (Founder). I'll review your project details and get back to you shortly at sarah@nexusbrand.co.
+        - button "Send another message" [ref=f1e600]
+  - contentinfo [ref=f1e515]:
+    - generic [ref=f1e516]: © 2026 Aqib Munir. All rights reserved.
+    - generic [ref=f1e519]:
+      - link "Back to Top" [ref=f1e520] [cursor=pointer]:
+        - /url: "#home"
+      - link "Projects" [ref=f1e521] [cursor=pointer]:
+        - /url: "#work"
+      - link "Contact" [ref=f1e522] [cursor=pointer]:
+        - /url: "#contact"

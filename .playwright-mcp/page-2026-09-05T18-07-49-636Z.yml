@@ -1,0 +1,275 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - navigation [ref=e5]:
+      - link "AM Aqib Munir Creative Tech" [ref=e6] [cursor=pointer]:
+        - /url: "#home"
+        - generic [ref=e7]: AM
+        - generic [ref=e8]: Aqib Munir
+        - generic [ref=e9]: Creative Tech
+      - generic [ref=e10]:
+        - link "Home" [ref=e11] [cursor=pointer]:
+          - /url: "#home"
+        - link "Selected Work" [ref=e12] [cursor=pointer]:
+          - /url: "#work"
+        - link "Skills & Stack" [ref=e13] [cursor=pointer]:
+          - /url: "#about"
+        - link "Process" [ref=e14] [cursor=pointer]:
+          - /url: "#services"
+        - link "Contact" [ref=e15] [cursor=pointer]:
+          - /url: "#contact"
+      - link "Hire Me" [ref=e17] [cursor=pointer]:
+        - /url: "#contact"
+  - main [ref=e22]:
+    - generic [ref=e23]:
+      - generic [ref=e24]: Available for Q2/Q3 Freelance & Client Projects
+      - heading "Turning complex code into beautiful, brand-driven web experiences." [level=1] [ref=e29]
+      - paragraph [ref=e30]: I engineer bespoke digital platforms, conversion-focused websites, and high-velocity web applications that help ambitious founders and businesses dominate their market.
+      - generic [ref=e31]:
+        - link "Explore Client Work" [ref=e32] [cursor=pointer]:
+          - /url: "#work"
+        - link "Start a Project" [ref=e36] [cursor=pointer]:
+          - /url: "#contact"
+      - generic [ref=e41]:
+        - generic [ref=e42]:
+          - generic [ref=e43]: 99/100
+          - generic [ref=e44]: Avg. Lighthouse Score
+          - generic [ref=e45]: Zero layout shift, instant TTI
+        - generic [ref=e46]:
+          - generic [ref=e47]: 3.2x
+          - generic [ref=e48]: Client Lead Velocity
+          - generic [ref=e49]: Measurable conversion lift
+        - generic [ref=e50]:
+          - generic [ref=e51]: Next.js 15
+          - generic [ref=e52]: Engineering Stack
+          - generic [ref=e53]: React 19 + TypeScript + Tailwind
+        - generic [ref=e54]:
+          - generic [ref=e55]: 100%
+          - generic [ref=e56]: Client Satisfaction
+          - generic [ref=e57]: Bespoke design, zero template slop
+    - generic [ref=e58]:
+      - generic [ref=e59]:
+        - generic [ref=e60]:
+          - generic [ref=e61]: Featured Client Deployments
+          - heading "Engineered for conversion & prestige." [level=2] [ref=e66]
+        - paragraph [ref=e67]: "Every project is custom architected from zero: bespoke brand identity, fluid micro-interactions, and blazing performance."
+      - generic [ref=e68]:
+        - generic [ref=e69] [cursor=pointer]:
+          - generic [ref=e71]:
+            - generic [ref=e72]:
+              - generic [ref=e73]: Luxury Hospitality / Web Experience
+              - generic [ref=e81]: Two Michelin Stars (2025)
+            - heading "KURO (黒)" [level=3] [ref=e82]
+            - paragraph [ref=e87]: Michelin-Caliber Omakase Digital Dining Sanctuary
+            - paragraph [ref=e88]: An immersive digital sanctuary for an exclusive 12-seat culinary journey in SoHo, NYC. Built to translate raw granite, charred cedar Shou Sugi Ban, and 1,000°C Kishu Binchotan firecraft into a contemplative web experience.
+            - generic [ref=e89]:
+              - generic [ref=e90]:
+                - generic [ref=e91]: +240%
+                - generic [ref=e92]: Booking Conversion
+              - generic [ref=e93]:
+                - generic [ref=e94]: 99/100
+                - generic [ref=e95]: Lighthouse Performance
+              - generic [ref=e96]:
+                - generic [ref=e97]: 3m 42s
+                - generic [ref=e98]: Avg Session Duration
+          - generic [ref=e99]:
+            - generic [ref=e100]:
+              - generic [ref=e101]: Next.js
+              - generic [ref=e102]: Tailwind CSS
+              - generic [ref=e103]: Framer Motion
+              - generic [ref=e104]: Interactive Reservation
+              - generic [ref=e105]: Brand Design
+            - generic [ref=e106]: View Case Study & Live Architecture
+        - generic [ref=e110] [cursor=pointer]:
+          - generic [ref=e112]:
+            - generic [ref=e113]:
+              - generic [ref=e114]: Commercial Enterprise & Lead Engine
+              - generic [ref=e121]: GAF Master Elite® • Top 2% US
+            - heading "Vanguard Dallas" [level=3] [ref=e122]
+            - paragraph [ref=e127]: High-Impact Exterior Contracting & Insurance Claim Engine
+            - paragraph [ref=e128]: A robust lead-generation and conversion machine for Texas’s premier roofing & storm restoration contractor. Combines interactive storm diagnostics, damage sliders, and instant quote calculators.
+            - generic [ref=e129]:
+              - generic [ref=e130]:
+                - generic [ref=e131]: 3.2x
+                - generic [ref=e132]: Qualified Inbounds
+              - generic [ref=e133]:
+                - generic [ref=e134]: 4m 15s
+                - generic [ref=e135]: Interactive Dwell Time
+              - generic [ref=e136]:
+                - generic [ref=e137]: 41.8%
+                - generic [ref=e138]: Lead Form Completion
+          - generic [ref=e139]:
+            - generic [ref=e140]:
+              - generic [ref=e141]: React
+              - generic [ref=e142]: Interactive Cost Estimator
+              - generic [ref=e143]: Hail Risk Quiz
+              - generic [ref=e144]: Before/After Slider
+              - generic [ref=e145]: Tailwind CSS
+            - generic [ref=e146]: View Case Study & Live Architecture
+        - generic [ref=e150] [cursor=pointer]:
+          - generic [ref=e152]:
+            - generic [ref=e153]:
+              - generic [ref=e154]: Artisanal Food & Beverage / Direct Ordering
+              - generic [ref=e159]: 3x Daily Drops • 48h Wild Ferment
+            - heading "Maison & Co." [level=3] [ref=e160]
+            - paragraph [ref=e165]: Apple-Grade All-Day Boulangerie & Gastronomy House
+            - paragraph [ref=e166]: A modern European culinary platform spanning dawn artisan bread drops, specialty light-roast coffee, and evening wood-fired brasserie dining with 150+ biodynamic wine cellar bookings.
+            - generic [ref=e167]:
+              - generic [ref=e168]:
+                - generic [ref=e169]: +185%
+                - generic [ref=e170]: Digital Order Volume
+              - generic [ref=e171]:
+                - generic [ref=e172]: 0.8s
+                - generic [ref=e173]: Page Speed Index
+              - generic [ref=e174]:
+                - generic [ref=e175]: 64%
+                - generic [ref=e176]: Repeat Customer Rate
+          - generic [ref=e177]:
+            - generic [ref=e178]:
+              - generic [ref=e179]: Next.js
+              - generic [ref=e180]: Direct Allocation Queue
+              - generic [ref=e181]: Wine Cellar Matrix
+              - generic [ref=e182]: Framer Motion
+              - generic [ref=e183]: Tailwind CSS
+            - generic [ref=e184]: View Case Study & Live Architecture
+        - generic [ref=e188] [cursor=pointer]:
+          - generic [ref=e190]:
+            - generic [ref=e191]:
+              - generic [ref=e192]: Specialty Coffee / Experience Booking
+              - generic [ref=e197]: 1,800m Shade-Grown • Direct Trade
+            - heading "Ember & Hearth" [level=3] [ref=e198]
+            - paragraph [ref=e203]: Direct-Trade Specialty Roastery & Culinary Table
+            - paragraph [ref=e204]: A warm, sensory-driven web presence for direct-trade small-batch coffee roasting and wood-fired baking. Features cupping flight bookings, roaster immersion experiences, and bean subscription flows.
+            - generic [ref=e205]:
+              - generic [ref=e206]:
+                - generic [ref=e207]: 1,200+
+                - generic [ref=e208]: Active Subscribers
+              - generic [ref=e209]:
+                - generic [ref=e210]: 100/100
+                - generic [ref=e211]: Mobile Usability Score
+              - generic [ref=e212]:
+                - generic [ref=e213]: "-38%"
+                - generic [ref=e214]: Checkout Abandonment
+          - generic [ref=e215]:
+            - generic [ref=e216]:
+              - generic [ref=e217]: React
+              - generic [ref=e218]: Coffee Flight Booker
+              - generic [ref=e219]: Subscription Engine
+              - generic [ref=e220]: Tailwind CSS
+              - generic [ref=e221]: Micro-Interactions
+            - generic [ref=e222]: View Case Study & Live Architecture
+    - generic [ref=e227]:
+      - generic [ref=e228]:
+        - generic [ref=e229]: Engineering Philosophy
+        - heading "Crafting interfaces where design and code never compromise." [level=2] [ref=e235]
+        - paragraph [ref=e236]: Most websites look like generic templates or crawl under bloated dependencies. I build at the exact intersection of high-tier aesthetic design and clean, scalable code.
+        - generic [ref=e237]:
+          - generic [ref=e242]:
+            - generic [ref=e243]: Full Brand Alignment
+            - generic [ref=e244]: Every line of styling reinforces your luxury, authority, or SaaS identity.
+          - generic [ref=e249]:
+            - generic [ref=e250]: Lighthouse 95+ Standard
+            - generic [ref=e251]: Zero layout shift (CLS < 0.05), responsive image pipelines, edge CDN ready.
+          - generic [ref=e256]:
+            - generic [ref=e257]: Interactive Revenue Engines
+            - generic [ref=e258]: Dynamic price calculators, reservation calendars, and custom quizzes.
+      - generic [ref=e259]:
+        - generic [ref=e261]:
+          - heading "Frontend & Creative Tech" [level=3] [ref=e267]
+          - generic [ref=e268]:
+            - generic [ref=e269]: React / Next.js 15
+            - generic [ref=e270]: TypeScript
+            - generic [ref=e271]: Tailwind CSS v4
+            - generic [ref=e272]: Framer Motion
+            - generic [ref=e273]: WebGL / Three.js
+            - generic [ref=e274]: GSAP Animation
+            - generic [ref=e275]: HTML5 Canvas
+            - generic [ref=e276]: Responsive Architecture
+        - generic [ref=e278]:
+          - heading "Full-Stack & Backend Systems" [level=3] [ref=e283]
+          - generic [ref=e284]:
+            - generic [ref=e285]: Node.js & Express
+            - generic [ref=e286]: PostgreSQL / Supabase
+            - generic [ref=e287]: REST & GraphQL APIs
+            - generic [ref=e288]: Prisma ORM
+            - generic [ref=e289]: Server Actions
+            - generic [ref=e290]: Redis Caching
+            - generic [ref=e291]: Authentication (OAuth/JWT)
+            - generic [ref=e292]: Stripe Payments
+        - generic [ref=e294]:
+          - heading "Performance & Engineering Discipline" [level=3] [ref=e299]
+          - generic [ref=e300]:
+            - generic [ref=e301]: Core Web Vitals Mastery
+            - generic [ref=e302]: Zero Layout Shift (CLS < 0.05)
+            - generic [ref=e303]: Lighthouse 95+ Auditing
+            - generic [ref=e304]: SEO & OpenGraph Architecture
+            - generic [ref=e305]: Accessibility (WCAG 2.2 AA)
+            - generic [ref=e306]: Automated CI/CD Pipelines
+        - generic [ref=e308]:
+          - heading "Client Delivery & Brand Strategy" [level=3] [ref=e312]
+          - generic [ref=e313]:
+            - generic [ref=e314]: High-Converting UI/UX
+            - generic [ref=e315]: Interactive Calculators & Tools
+            - generic [ref=e316]: Design System Architecture
+            - generic [ref=e317]: Micro-Interactions
+            - generic [ref=e318]: Rapid MVP Prototyping
+            - generic [ref=e319]: Lead Generation Funnels
+    - generic [ref=e320]:
+      - generic [ref=e321]:
+        - generic [ref=e322]: How We Work Together
+        - heading "From whiteboard concept to production launch." [level=2] [ref=e326]
+        - paragraph [ref=e327]: A structured, transparent delivery pipeline with zero fluff, rapid iterations, and relentless attention to detail.
+      - generic [ref=e328]:
+        - generic [ref=e330]:
+          - generic [ref=e331]: "01"
+          - heading "Brand Vision & Technical Discovery" [level=3] [ref=e332]
+          - paragraph [ref=e333]: We dissect your core value proposition, audience psychology, and business objectives. We architect the visual direction, interactive hooks, and conversion flow before writing a line of code.
+        - generic [ref=e335]:
+          - generic [ref=e336]: "02"
+          - heading "High-Fidelity Prototyping & Motion Design" [level=3] [ref=e337]
+          - paragraph [ref=e338]: We sculpt fluid, bespoke interfaces using modern design systems, micro-interactions, and responsive layouts that match the prestige of top-tier venture-backed brands.
+        - generic [ref=e340]:
+          - generic [ref=e341]: "03"
+          - heading "Full-Stack Engineering & Zero-Jank Polish" [level=3] [ref=e342]
+          - paragraph [ref=e343]: Production-ready code built with Next.js, React, TypeScript, and Tailwind. Optimized for 60fps animations, instant interactions, and strict accessibility.
+        - generic [ref=e345]:
+          - generic [ref=e346]: "04"
+          - heading "Performance Audit, Launch & Conversion" [level=3] [ref=e347]
+          - paragraph [ref=e348]: Comprehensive Lighthouse audit, SEO meta tags, Core Web Vitals optimization, and deployment to high-availability edge networks with zero downtime.
+    - generic [ref=e351]:
+      - generic [ref=e352]:
+        - generic [ref=e353]:
+          - generic [ref=e354]: Let's Build Something Exceptional
+          - heading "Have a project in mind?" [level=2] [ref=e359]
+          - paragraph [ref=e360]: Tell me about your product vision, timeline, or redesign requirements. I typically reply within 12 hours with a clear proposal and execution plan.
+          - button "contact@aqibmunir.dev Copy" [ref=e362]:
+            - generic [ref=e363]: contact@aqibmunir.dev
+            - generic [ref=e368]: Copy
+        - generic [ref=e369]:
+          - generic [ref=e370]: 📍 Worldwide Remote / Timezone Flexible
+          - generic [ref=e371]: ⚡ Direct 1-on-1 Engineering (No agency middleman)
+      - generic [ref=e373]:
+        - generic [ref=e374]:
+          - generic [ref=e375]: YOUR NAME
+          - textbox "Alex Vance" [ref=e376]
+        - generic [ref=e377]:
+          - generic [ref=e378]: EMAIL ADDRESS
+          - textbox "alex@company.com" [ref=e379]
+        - generic [ref=e380]:
+          - generic [ref=e381]: ESTIMATED BUDGET
+          - generic [ref=e382]:
+            - button "< $3k" [ref=e383]
+            - button "$3k - $6k" [ref=e384]
+            - button "$6k - $15k+" [ref=e385]
+        - generic [ref=e386]:
+          - generic [ref=e387]: PROJECT DETAILS
+          - textbox "Tell me about your goals, brand requirements, or ideal launch timeline..." [ref=e388]
+        - button "Send Project Inquiry" [ref=e389]
+  - contentinfo [ref=e394]:
+    - generic [ref=e395]: © 2026 Aqib Munir. All rights reserved.
+    - generic [ref=e398]:
+      - link "Back to Top" [ref=e399] [cursor=pointer]:
+        - /url: "#home"
+      - link "Projects" [ref=e400] [cursor=pointer]:
+        - /url: "#work"
+      - link "Contact" [ref=e401] [cursor=pointer]:
+        - /url: "#contact"
