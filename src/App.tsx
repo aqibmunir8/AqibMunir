@@ -36,6 +36,25 @@ export function App() {
   const [copiedPhone, setCopiedPhone] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [budgetSelected, setBudgetSelected] = useState('$3,000 - $6,000');
+  const [currentTime, setCurrentTime] = useState<string>('');
+
+  // Live clock updating according to user timezone
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      setCurrentTime(
+        now.toLocaleTimeString('en-US', {
+          hour: '2-digit',
+          minute: '2-digit',
+          hour12: true
+        })
+      );
+    };
+
+    updateTime();
+    const timer = setInterval(updateTime, 1000);
+    return () => clearInterval(timer);
+  }, []);
 
   // Theme state: default to system or stored preference
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
@@ -373,7 +392,7 @@ export function App() {
                 <span className="font-mono">{email}</span>
                 <button
                   onClick={handleCopyEmail}
-                  className="text-xs font-semibold text-[#E2B872] hover:underline"
+                  className="text-xs font-semibold text-[#FFB238] hover:underline"
                 >
                   {copiedEmail ? 'Copied!' : 'Copy Email'}
                 </button>
@@ -506,7 +525,7 @@ export function App() {
         {/* ================= WORK PROCESS ================= */}
         <section id="services" className="py-20 sm:py-28 border-t border-slate-200/80 dark:border-white/5">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 text-xs font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-2 font-semibold dark:font-normal">
+            <div className="inline-flex items-center gap-2 text-xs font-mono text-[#E2B872] uppercase tracking-wider mb-2 font-semibold dark:font-normal">
               <Terminal className="w-3.5 h-3.5" />
               <span>How We Work Together</span>
             </div>
@@ -563,7 +582,7 @@ export function App() {
                         <Send className="w-4 h-4 text-[#E2B872]" />
                         <span className="font-mono truncate">{email}</span>
                       </div>
-                      <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-500/20 text-[#E2B872]">
+                      <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-amber-100/70 dark:bg-amber-500/15 text-[#FFB238] font-semibold">
                         {copiedEmail ? 'Copied!' : 'Copy'}
                       </span>
                     </button>
@@ -576,7 +595,7 @@ export function App() {
                         <Phone className="w-4 h-4 text-[#E2B872]" />
                         <span className="font-mono truncate">{phone}</span>
                       </div>
-                      <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-500/20 text-[#E2B872]">
+                      <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-amber-100/70 dark:bg-amber-500/15 text-[#FFB238] font-semibold">
                         {copiedPhone ? 'Copied!' : 'Copy'}
                       </span>
                     </button>
@@ -584,8 +603,8 @@ export function App() {
                 </div>
 
                 <div className="pt-6 border-t border-slate-200 dark:border-white/10 text-xs text-slate-500 dark:text-zinc-500 space-y-1">
-                  <div>📍 Worldwide Remote / Timezone Flexible</div>
-                  <div>⚡ Direct 1-on-1 Engineering (No agency middleman)</div>
+                  <div>Worldwide Remote / Timezone Flexible</div>
+                  <div>Direct 1-on-1 Engineering (No agency middleman)</div>
                 </div>
               </div>
 
@@ -687,11 +706,17 @@ export function App() {
       </main>
 
       {/* ================= FOOTER ================= */}
-      <footer className="border-t border-slate-200 dark:border-white/10 py-8 px-4 max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-zinc-500">
+      <footer className="border-t border-slate-200 dark:border-white/10 py-8 px-4 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-zinc-500">
         <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-          <span>© {new Date().getFullYear()} Aqib Munir. All rights reserved.</span>
+          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          <span>© {new Date().getFullYear()} Aqib Munir. Built with passion.</span>
         </div>
+
+        {/* Live Local Time */}
+        <div className="font-mono text-[11px] sm:text-xs font-medium text-slate-500 dark:text-zinc-400 tabular-nums">
+          {currentTime || '12:00 PM'}
+        </div>
+
         <div className="flex items-center gap-6">
           <a href="#home" className="hover:text-slate-900 dark:hover:text-zinc-300 transition-colors">Back to Top</a>
           <a href="#work" className="hover:text-slate-900 dark:hover:text-zinc-300 transition-colors">Projects</a>
