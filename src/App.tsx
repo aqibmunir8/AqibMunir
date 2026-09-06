@@ -93,7 +93,7 @@ export function App() {
       particleCount: 100,
       spread: 70,
       origin: { y: 0.6 },
-      colors: ['#6366F1', '#06B6D4', '#10B981', '#F59E0B']
+      colors: ['#6366F1', '#06B6D4', '#10B981', '#E2B872']
     });
   };
 
@@ -131,7 +131,7 @@ export function App() {
       <header className="fixed top-0 left-0 right-0 z-50 py-4 sm:py-5 portfolio-navbar">
         <nav className="flex items-center justify-between w-full max-w-6xl mx-auto px-6">
           <a href="#home" className="flex items-center gap-2.5 font-display font-bold text-lg tracking-tight group">
-            <span className="text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-300 transition-colors text-base sm:text-lg">
+            <span className="text-slate-900 dark:text-white group-hover:text-amber-500 dark:group-hover:text-amber-300 transition-colors text-base sm:text-lg">
               Aqib Munir
             </span>
           </a>
@@ -373,7 +373,7 @@ export function App() {
                 <span className="font-mono">{email}</span>
                 <button
                   onClick={handleCopyEmail}
-                  className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:underline"
+                  className="text-xs font-semibold text-[#E2B872] hover:underline"
                 >
                   {copiedEmail ? 'Copied!' : 'Copy Email'}
                 </button>
@@ -410,7 +410,7 @@ export function App() {
         <section id="work" className="py-20 sm:py-28 border-t border-slate-200/80 dark:border-white/5">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-4">
             <div>
-              <div className="inline-flex items-center gap-2 text-xs font-mono text-indigo-600 dark:text-indigo-400 uppercase tracking-wider mb-2 font-semibold dark:font-normal">
+              <div className="inline-flex items-center gap-2 text-xs font-mono text-[#E2B872] uppercase tracking-wider mb-2 font-semibold dark:font-normal">
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Featured Client Deployments</span>
               </div>
@@ -449,7 +449,7 @@ export function App() {
 
             {/* Left Column: Philosophy & Bio */}
             <div className="lg:col-span-5 space-y-6">
-              <div className="inline-flex items-center gap-2 text-xs font-mono text-cyan-600 dark:text-cyan-400 uppercase tracking-wider font-semibold dark:font-normal">
+              <div className="inline-flex items-center gap-2 text-xs font-mono text-[#E2B872] uppercase tracking-wider font-semibold dark:font-normal">
                 <Code2 className="w-3.5 h-3.5" />
                 <span>Engineering Philosophy</span>
               </div>
@@ -467,7 +467,7 @@ export function App() {
                   { title: 'Interactive Revenue Engines', desc: 'Dynamic price calculators, reservation calendars, and custom quizzes.' }
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3 p-3.5 rounded-xl glass-card border border-slate-200/80 dark:border-white/5">
-                    <CheckCircle2 className="w-5 h-5 text-indigo-600 dark:text-indigo-400 shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-5 h-5 text-[#E2B872] shrink-0 mt-0.5" />
                     <div>
                       <div className="text-xs sm:text-sm font-semibold text-slate-900 dark:text-zinc-200">{item.title}</div>
                       <div className="text-[12px] text-slate-600 dark:text-zinc-400">{item.desc}</div>
@@ -480,9 +480,9 @@ export function App() {
             {/* Right Column: Stack Bento Grid */}
             <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
               {SKILL_CATEGORIES.map((cat, i) => (
-                <div key={i} className="p-5 rounded-2xl glass-card border border-slate-200/80 dark:border-white/10 hover:border-indigo-400/40 dark:hover:border-indigo-500/20 transition-all flex flex-col justify-between">
+                <div key={i} className="p-5 rounded-2xl glass-card border border-slate-200/80 dark:border-white/10 hover:border-amber-400/40 dark:hover:border-amber-500/20 transition-all flex flex-col justify-between">
                   <div>
-                    <div className="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 mb-3">
+                    <div className="flex items-center gap-2 text-[#E2B872] mb-3">
                       {i === 0 ? <Layers className="w-4 h-4" /> :
                        i === 1 ? <Cpu className="w-4 h-4" /> :
                        i === 2 ? <ShieldCheck className="w-4 h-4" /> : <Zap className="w-4 h-4" />}
@@ -522,7 +522,7 @@ export function App() {
             {WORK_PROCESS.map((proc, i) => (
               <div key={i} className="p-6 rounded-2xl glass-card border border-slate-200/80 dark:border-white/10 relative flex flex-col justify-between hover:border-slate-300 dark:hover:border-white/20 transition-colors">
                 <div>
-                  <div className="font-mono text-3xl font-extrabold text-indigo-500/30 mb-4">{proc.step}</div>
+                  <div className="font-mono text-3xl font-extrabold text-[#E2B872]/30 mb-4">{proc.step}</div>
                   <h3 className="font-display font-bold text-lg text-slate-900 dark:text-white mb-2">{proc.title}</h3>
                   <p className="text-xs sm:text-sm text-slate-600 dark:text-zinc-400 leading-relaxed">{proc.description}</p>
                 </div>
@@ -543,7 +543,7 @@ export function App() {
               {/* Left Column: Quick Contact Info */}
               <div className="md:col-span-5 space-y-6 flex flex-col justify-between">
                 <div>
-                  <div className="inline-flex items-center gap-2 text-xs font-mono text-indigo-600 dark:text-indigo-400 uppercase tracking-wider mb-2 font-semibold dark:font-normal">
+                  <div className="inline-flex items-center gap-2 text-xs font-mono text-[#E2B872] uppercase tracking-wider mb-2 font-semibold dark:font-normal">
                     <Sparkles className="w-3.5 h-3.5" />
                     <span>Let's Build Something Exceptional</span>
                   </div>
@@ -560,10 +560,10 @@ export function App() {
                       className="w-full flex items-center justify-between p-3.5 rounded-xl bg-slate-100 dark:bg-white/5 hover:bg-slate-200/80 dark:hover:bg-white/10 border border-slate-200 dark:border-white/10 text-xs sm:text-sm text-slate-800 dark:text-zinc-300 hover:text-slate-900 dark:hover:text-white transition-colors text-left"
                     >
                       <div className="flex items-center gap-2.5">
-                        <Send className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
+                        <Send className="w-4 h-4 text-[#E2B872]" />
                         <span className="font-mono truncate">{email}</span>
                       </div>
-                      <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-500/20 text-indigo-700 dark:text-indigo-300">
+                      <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-500/20 text-[#E2B872]">
                         {copiedEmail ? 'Copied!' : 'Copy'}
                       </span>
                     </button>
@@ -573,10 +573,10 @@ export function App() {
                       className="w-full flex items-center justify-between p-3.5 rounded-xl bg-slate-100 dark:bg-white/5 hover:bg-slate-200/80 dark:hover:bg-white/10 border border-slate-200 dark:border-white/10 text-xs sm:text-sm text-slate-800 dark:text-zinc-300 hover:text-slate-900 dark:hover:text-white transition-colors text-left"
                     >
                       <div className="flex items-center gap-2.5">
-                        <Phone className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
+                        <Phone className="w-4 h-4 text-[#E2B872]" />
                         <span className="font-mono truncate">{phone}</span>
                       </div>
-                      <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-500/20 text-indigo-700 dark:text-indigo-300">
+                      <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-amber-100 dark:bg-amber-500/20 text-[#E2B872]">
                         {copiedPhone ? 'Copied!' : 'Copy'}
                       </span>
                     </button>
@@ -602,7 +602,7 @@ export function App() {
                     </div>
                     <h3 className="font-display text-2xl font-bold text-slate-900 dark:text-white mb-2">Message Received!</h3>
                     <p className="text-slate-700 dark:text-zinc-300 text-sm max-w-sm mb-6">
-                      Thank you for reaching out, {formData.name}. I'll review your project details and get back to you shortly at <span className="text-indigo-600 dark:text-indigo-400 font-mono font-medium">{formData.email}</span>.
+                      Thank you for reaching out, {formData.name}. I'll review your project details and get back to you shortly at <span className="text-[#E2B872] font-mono font-medium">{formData.email}</span>.
                     </p>
                     <button
                       onClick={() => setFormSubmitted(false)}
@@ -647,7 +647,7 @@ export function App() {
                             onClick={() => setBudgetSelected(budget)}
                             className={`py-2 px-3 rounded-xl text-xs font-medium border transition-all ${
                               budgetSelected === budget
-                                ? 'bg-indigo-50 border-indigo-500 text-indigo-700 dark:bg-indigo-600/30 dark:border-indigo-500 dark:text-white font-semibold shadow-sm'
+                                ? 'bg-amber-50 border-amber-500 text-[#E2B872] dark:bg-amber-500/20 dark:border-amber-500 dark:text-white font-semibold shadow-sm'
                                 : 'bg-slate-100/80 dark:bg-black/30 border-slate-200 dark:border-white/10 text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-200/60 dark:hover:bg-white/5'
                             }`}
                           >
@@ -732,7 +732,7 @@ export function App() {
                 {/* Modal Header */}
                 <div>
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="text-xs font-mono px-2.5 py-1 rounded bg-indigo-50 dark:bg-indigo-500/20 text-indigo-700 dark:text-indigo-300 border border-indigo-200 dark:border-indigo-500/30">
+                    <span className="text-xs font-mono px-2.5 py-1 rounded bg-amber-50 dark:bg-amber-500/20 text-[#E2B872] border border-amber-200 dark:border-amber-500/30">
                       {selectedProject.category}
                     </span>
                     <span className="text-xs font-semibold px-2.5 py-1 rounded bg-slate-100 dark:bg-white/10 text-slate-700 dark:text-zinc-300">
@@ -751,7 +751,7 @@ export function App() {
                 <div className="grid grid-cols-3 gap-3 p-4 rounded-2xl bg-slate-50 dark:bg-black/50 border border-slate-200 dark:border-white/10">
                   {selectedProject.metrics.map((m, i) => (
                     <div key={i} className="text-center">
-                      <div className="font-display text-lg sm:text-2xl font-bold text-indigo-600 dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-indigo-400 dark:to-cyan-400">
+                      <div className="font-display text-lg sm:text-2xl font-bold text-[#E2B872]">
                         {m.value}
                       </div>
                       <div className="text-xs text-slate-500 dark:text-zinc-400">{m.label}</div>
@@ -762,13 +762,13 @@ export function App() {
                 {/* Case Study Body */}
                 <div className="space-y-4 text-sm text-slate-700 dark:text-zinc-300 leading-relaxed">
                   <div>
-                    <h4 className="text-xs font-mono text-indigo-600 dark:text-indigo-400 uppercase tracking-wider mb-1 font-semibold dark:font-normal">THE OVERVIEW</h4>
+                    <h4 className="text-xs font-mono text-[#E2B872] uppercase tracking-wider mb-1 font-semibold dark:font-normal">THE OVERVIEW</h4>
                     <p>{selectedProject.description}</p>
                   </div>
 
                   <div>
-                    <h4 className="text-xs font-mono text-cyan-600 dark:text-cyan-400 uppercase tracking-wider mb-1 font-semibold dark:font-normal">CLIENT IMPACT & CONVERSION</h4>
-                    <p className="p-3.5 rounded-xl bg-indigo-50 dark:bg-indigo-950/30 border border-indigo-200 dark:border-indigo-500/20 text-indigo-900 dark:text-indigo-200">
+                    <h4 className="text-xs font-mono text-[#E2B872] uppercase tracking-wider mb-1 font-semibold dark:font-normal">CLIENT IMPACT & CONVERSION</h4>
+                    <p className="p-3.5 rounded-xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-500/20 text-slate-900 dark:text-zinc-200">
                       {selectedProject.clientImpact}
                     </p>
                   </div>

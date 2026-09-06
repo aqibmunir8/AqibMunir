@@ -86,7 +86,7 @@ export function ProjectCard({ project, onOpenModal, icon: IconComponent }: Proje
                 <span>Zero Layout Shift (CLS &lt; 0.02)</span>
               </div>
               <div className="text-[10px] font-mono text-white/90 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] flex items-center gap-1">
-                <ImageIcon className="w-3 h-3 text-indigo-400 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]" />
+                <ImageIcon className="w-3 h-3 text-amber-400 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]" />
                 <span>{project.image}</span>
               </div>
             </div>
@@ -115,7 +115,7 @@ export function ProjectCard({ project, onOpenModal, icon: IconComponent }: Proje
             target="_blank"
             rel="noreferrer"
             onClick={(e) => e.stopPropagation()}
-            className="absolute top-3 right-3 p-2 rounded-full bg-white/90 dark:bg-black/70 backdrop-blur-md border border-slate-200 dark:border-white/15 text-slate-700 dark:text-zinc-300 hover:text-indigo-600 dark:hover:text-white hover:bg-white dark:hover:bg-black transition-all shadow-md group/btn z-20"
+            className="absolute top-3 right-3 p-2 rounded-full bg-white/90 dark:bg-black/70 backdrop-blur-md border border-slate-200 dark:border-white/15 text-slate-700 dark:text-zinc-300 hover:text-[#E2B872] dark:hover:text-white hover:bg-white dark:hover:bg-black transition-all shadow-md group/btn z-20"
             title="Open Live Website"
           >
             <ExternalLink className="w-3.5 h-3.5 group-hover/btn:scale-110 transition-transform" />
@@ -124,15 +124,15 @@ export function ProjectCard({ project, onOpenModal, icon: IconComponent }: Proje
 
         {/* Category & Title */}
         <div className="flex items-center gap-2 mb-2">
-          <span className="p-1.5 rounded-lg bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-zinc-300 group-hover:text-indigo-600 dark:group-hover:text-white transition-colors">
+          <span className="p-1.5 rounded-lg bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-slate-700 dark:text-zinc-300 group-hover:text-amber-500 dark:group-hover:text-white transition-colors">
             <IconComponent className="w-3.5 h-3.5" />
           </span>
-          <span className="text-xs font-mono text-indigo-600 dark:text-zinc-400 uppercase tracking-wider font-semibold dark:font-normal">
+          <span className="text-xs font-mono text-[#E2B872] uppercase tracking-wider font-semibold dark:font-normal">
             {project.category}
           </span>
         </div>
 
-        <h3 className="font-display text-2xl font-bold text-slate-900 dark:text-white mb-1.5 group-hover:text-indigo-600 dark:group-hover:text-indigo-300 transition-colors">
+        <h3 className="font-display text-2xl font-bold text-slate-900 dark:text-white mb-1.5 group-hover:text-amber-500 dark:group-hover:text-amber-300 transition-colors">
           {project.title}
         </h3>
         <p className="text-xs sm:text-sm text-slate-700 dark:text-zinc-300 font-medium mb-3">
@@ -164,7 +164,7 @@ export function ProjectCard({ project, onOpenModal, icon: IconComponent }: Proje
         </div>
 
         {/* View Details Link */}
-        <div className="flex items-center justify-between text-xs font-semibold text-indigo-600 dark:text-indigo-400 group-hover:text-indigo-700 dark:group-hover:text-indigo-300">
+        <div className="flex items-center justify-between text-xs font-semibold text-[#E2B872] group-hover:text-amber-600 dark:group-hover:text-amber-400">
           <span className="flex items-center gap-1.5">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Interactive Case Study & Architecture</span>
