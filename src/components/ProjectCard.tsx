@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Sparkles, Image as ImageIcon, CheckCircle2 } from 'lucide-react';
+import { ExternalLink, Sparkles, CheckCircle2 } from 'lucide-react';
 import { type Project } from '../data/portfolio';
 
 interface ProjectCardProps {
@@ -80,10 +80,6 @@ export function ProjectCard({ project, onOpenModal, icon: IconComponent }: Proje
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]" />
                 <span>Zero Layout Shift (CLS &lt; 0.02)</span>
               </div>
-              <div className="text-[10px] font-mono text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] flex items-center gap-1">
-                <ImageIcon className="w-3 h-3 text-indigo-400 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]" />
-                <span>{project.image}</span>
-              </div>
             </div>
 
             {/* Optional real image layer overlay when saved in public/assets */}
@@ -96,9 +92,9 @@ export function ProjectCard({ project, onOpenModal, icon: IconComponent }: Proje
               }`}
               loading="lazy"
             />
-            {/* Subtle dark gradient overlay on image for clean white text contrast & legibility across all 4 photos */}
+            {/* Soft dark gradient overlay on image for clarity without obscuring the photo */}
             <div
-              className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-black/50 transition-opacity duration-500 pointer-events-none ${
+              className={`absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-black/25 transition-opacity duration-500 pointer-events-none ${
                 imageLoaded ? 'opacity-100' : 'opacity-0'
               }`}
             />

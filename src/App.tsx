@@ -597,7 +597,7 @@ export function App() {
                         <Send className="w-4 h-4 text-[#E2B872]" />
                         <span className="font-mono truncate">{email}</span>
                       </div>
-                      <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-amber-100/70 dark:bg-amber-500/15 text-[#FFB238] font-semibold">
+                      <span className="text-[11px] font-mono text-[#FFB238] font-semibold">
                         {copiedEmail ? 'Copied!' : 'Copy'}
                       </span>
                     </button>
@@ -610,7 +610,7 @@ export function App() {
                         <Phone className="w-4 h-4 text-[#E2B872]" />
                         <span className="font-mono truncate">{phone}</span>
                       </div>
-                      <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-amber-100/70 dark:bg-amber-500/15 text-[#FFB238] font-semibold">
+                      <span className="text-[11px] font-mono text-[#FFB238] font-semibold">
                         {copiedPhone ? 'Copied!' : 'Copy'}
                       </span>
                     </button>
