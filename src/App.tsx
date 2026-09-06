@@ -20,7 +20,8 @@ import {
   Building2,
   UtensilsCrossed,
   Sun,
-  Moon
+  Moon,
+  Phone
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { PROJECTS, SKILL_CATEGORIES, WORK_PROCESS, type Project } from './data/portfolio';
@@ -31,6 +32,7 @@ export function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [copiedEmail, setCopiedEmail] = useState(false);
+  const [copiedPhone, setCopiedPhone] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [budgetSelected, setBudgetSelected] = useState('$3,000 - $6,000');
 
@@ -67,11 +69,18 @@ export function App() {
   });
 
   const email = 'aqibmunir7@gmail.com';
+  const phone = '+92 317 0061218';
 
   const handleCopyEmail = () => {
     navigator.clipboard.writeText(email);
     setCopiedEmail(true);
     setTimeout(() => setCopiedEmail(false), 2500);
+  };
+
+  const handleCopyPhone = () => {
+    navigator.clipboard.writeText(phone);
+    setCopiedPhone(true);
+    setTimeout(() => setCopiedPhone(false), 2500);
   };
 
   const handleFormSubmit = (e: React.FormEvent) => {
@@ -467,6 +476,19 @@ export function App() {
                       </div>
                       <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-500/20 text-indigo-700 dark:text-indigo-300">
                         {copiedEmail ? 'Copied!' : 'Copy'}
+                      </span>
+                    </button>
+
+                    <button
+                      onClick={handleCopyPhone}
+                      className="w-full flex items-center justify-between p-3.5 rounded-xl bg-slate-100 dark:bg-white/5 hover:bg-slate-200/80 dark:hover:bg-white/10 border border-slate-200 dark:border-white/10 text-xs sm:text-sm text-slate-800 dark:text-zinc-300 hover:text-slate-900 dark:hover:text-white transition-colors text-left"
+                    >
+                      <div className="flex items-center gap-2.5">
+                        <Phone className="w-4 h-4 text-indigo-600 dark:text-indigo-400" />
+                        <span className="font-mono truncate">{phone}</span>
+                      </div>
+                      <span className="text-[11px] font-mono px-2 py-0.5 rounded bg-indigo-100 dark:bg-indigo-500/20 text-indigo-700 dark:text-indigo-300">
+                        {copiedPhone ? 'Copied!' : 'Copy'}
                       </span>
                     </button>
                   </div>
