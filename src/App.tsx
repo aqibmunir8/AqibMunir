@@ -116,35 +116,34 @@ export function App() {
     });
   };
 
-  // Track active section on scroll
+  // Track active section using IntersectionObserver (off the main JS scroll thread)
   useEffect(() => {
-    const handleScroll = () => {
-      const sections = ['home', 'work', 'about', 'services', 'contact'];
-      const scrollPos = window.scrollY + 200;
-
-      for (const section of sections) {
-        const el = document.getElementById(section);
-        if (el) {
-          const top = el.offsetTop;
-          const height = el.offsetHeight;
-          if (scrollPos >= top && scrollPos < top + height) {
-            setActiveNav(section);
-            break;
+    const sections = ['home', 'work', 'about', 'services', 'contact'];
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveNav(entry.target.id);
           }
-        }
-      }
-    };
+        });
+      },
+      { rootMargin: '-30% 0px -60% 0px' }
+    );
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    sections.forEach((id) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    return () => observer.disconnect();
   }, []);
 
   return (
     <div className="min-h-screen bg-white text-slate-900 dark:bg-[#09090b] dark:text-[#fafafa] relative overflow-x-hidden selection:bg-indigo-500/20 selection:text-indigo-900 dark:selection:bg-indigo-500/30 dark:selection:text-indigo-200 transition-colors duration-300">
 
       {/* Background Ambient Glow Orbs */}
-      <div className="fixed top-12 left-1/2 -translate-x-1/2 -z-10 w-[700px] h-[550px] bg-gradient-to-b from-indigo-300/20 via-sky-200/20 to-transparent dark:from-indigo-600/15 dark:via-cyan-600/10 dark:to-transparent rounded-full blur-[140px] pointer-events-none" />
-      <div className="fixed bottom-1/4 right-10 -z-10 w-[450px] h-[450px] bg-cyan-400/15 dark:bg-cyan-600/10 rounded-full blur-[130px] pointer-events-none" />
+      <div className="fixed top-12 left-1/2 -translate-x-1/2 -z-10 w-[600px] h-[450px] bg-gradient-to-b from-indigo-300/20 via-sky-200/20 to-transparent dark:from-indigo-600/15 dark:via-cyan-600/10 dark:to-transparent rounded-full blur-3xl pointer-events-none transform-gpu will-change-transform" />
+      <div className="fixed bottom-1/4 right-10 -z-10 w-[380px] h-[380px] bg-cyan-400/15 dark:bg-cyan-600/10 rounded-full blur-3xl pointer-events-none transform-gpu will-change-transform" />
 
       {/* Navigation Bar */}
       <header className="fixed top-0 left-0 right-0 z-50 py-4 sm:py-5 portfolio-navbar">
