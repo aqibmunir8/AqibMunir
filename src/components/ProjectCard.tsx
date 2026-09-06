@@ -37,14 +37,20 @@ export function ProjectCard({ project, onOpenModal, icon: IconComponent }: Proje
             {/* Inner Header Bar Mockup */}
             <div className="flex items-center justify-between z-10">
               <div className="flex items-center gap-2">
-                <div className="w-2.5 h-2.5 rounded-full bg-red-500/60" />
-                <div className="w-2.5 h-2.5 rounded-full bg-amber-500/60" />
-                <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/60" />
-                <span className="text-[10px] font-mono text-zinc-400 ml-2">
+                <div className="w-2.5 h-2.5 rounded-full bg-red-500/70" />
+                <div className="w-2.5 h-2.5 rounded-full bg-amber-500/70" />
+                <div className="w-2.5 h-2.5 rounded-full bg-emerald-500/70" />
+                <span className="text-[10px] font-mono text-white font-medium drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] ml-2">
                   {project.id}.production.app
                 </span>
               </div>
-              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-white/10 text-zinc-300 border border-white/10">
+              <span
+                className="text-[10px] font-mono px-2.5 py-0.5 rounded-full text-white font-medium backdrop-blur-md shadow-sm border"
+                style={{
+                  backgroundColor: `${project.accentColor}30`,
+                  borderColor: `${project.accentColor}60`
+                }}
+              >
                 {project.badge}
               </span>
             </div>
@@ -52,30 +58,30 @@ export function ProjectCard({ project, onOpenModal, icon: IconComponent }: Proje
             {/* Center Content Mockup */}
             <div className="my-auto text-left z-10 py-2">
               <div
-                className="w-10 h-10 rounded-xl flex items-center justify-center mb-2.5 text-white border shadow-lg"
+                className="w-10 h-10 rounded-xl flex items-center justify-center mb-2.5 text-white border shadow-lg backdrop-blur-md"
                 style={{
-                  backgroundColor: `${project.accentColor}20`,
-                  borderColor: `${project.accentColor}40`
+                  backgroundColor: `${project.accentColor}30`,
+                  borderColor: `${project.accentColor}60`
                 }}
               >
                 <IconComponent className="w-5 h-5" />
               </div>
-              <div className="font-display font-bold text-white text-lg tracking-tight">
+              <div className="font-display font-bold text-white text-lg tracking-tight drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                 {project.title}
               </div>
-              <div className="text-xs text-zinc-300 line-clamp-1 mt-0.5">
+              <div className="text-xs text-white font-medium line-clamp-1 mt-0.5 drop-shadow-[0_1px_3px_rgba(0,0,0,0.8)]">
                 {project.tagline}
               </div>
             </div>
 
             {/* Bottom Live Metrics Bar Mockup */}
-            <div className="flex items-center justify-between pt-3 border-t border-white/10 z-10">
-              <div className="flex items-center gap-1.5 text-[11px] font-mono text-zinc-300">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+            <div className="flex items-center justify-between pt-3 border-t border-white/20 z-10">
+              <div className="flex items-center gap-1.5 text-[11px] font-mono text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]" />
                 <span>Zero Layout Shift (CLS &lt; 0.02)</span>
               </div>
-              <div className="text-[10px] font-mono text-zinc-400 flex items-center gap-1">
-                <ImageIcon className="w-3 h-3 text-indigo-400" />
+              <div className="text-[10px] font-mono text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] flex items-center gap-1">
+                <ImageIcon className="w-3 h-3 text-indigo-400 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]" />
                 <span>{project.image}</span>
               </div>
             </div>
@@ -89,6 +95,12 @@ export function ProjectCard({ project, onOpenModal, icon: IconComponent }: Proje
                 imageLoaded ? 'opacity-100' : 'opacity-0 pointer-events-none'
               }`}
               loading="lazy"
+            />
+            {/* Subtle dark gradient overlay on image for clean white text contrast & legibility across all 4 photos */}
+            <div
+              className={`absolute inset-0 bg-gradient-to-t from-black/80 via-black/35 to-black/50 transition-opacity duration-500 pointer-events-none ${
+                imageLoaded ? 'opacity-100' : 'opacity-0'
+              }`}
             />
           </div>
 
