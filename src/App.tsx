@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, memo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Sparkles,
@@ -24,21 +24,13 @@ import {
   Check,
   ArrowRight
 } from 'lucide-react';
-import confetti from 'canvas-confetti';
 import { PROJECTS, SKILL_CATEGORIES, WORK_PROCESS, type Project } from './data/portfolio';
 import { ProjectCard } from './components/ProjectCard';
 
-export function App() {
-  const [activeNav, setActiveNav] = useState('home');
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [copiedEmail, setCopiedEmail] = useState(false);
-  const [copiedPhone, setCopiedPhone] = useState(false);
-  const [formSubmitted, setFormSubmitted] = useState(false);
-  const [budgetSelected, setBudgetSelected] = useState('$3,000 - $6,000');
+// Isolated Live Clock component to avoid root-level state re-renders every second
+const LiveClock = memo(function LiveClock() {
   const [currentTime, setCurrentTime] = useState<string>('');
 
-  // Live clock updating according to user timezone
   useEffect(() => {
     const updateTime = () => {
       const now = new Date();
@@ -55,6 +47,22 @@ export function App() {
     const timer = setInterval(updateTime, 1000);
     return () => clearInterval(timer);
   }, []);
+
+  return (
+    <div className="font-mono text-[11px] sm:text-xs font-medium text-slate-500 dark:text-zinc-400 tabular-nums">
+      {currentTime || '12:00 PM'}
+    </div>
+  );
+});
+
+export function App() {
+  const [activeNav, setActiveNav] = useState('home');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [copiedEmail, setCopiedEmail] = useState(false);
+  const [copiedPhone, setCopiedPhone] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
+  const [budgetSelected, setBudgetSelected] = useState('$3,000 - $6,000');
 
   // Theme state: default to system or stored preference
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
@@ -103,17 +111,23 @@ export function App() {
     setTimeout(() => setCopiedPhone(false), 2500);
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.email) return;
 
     setFormSubmitted(true);
-    confetti({
-      particleCount: 100,
-      spread: 70,
-      origin: { y: 0.6 },
-      colors: ['#6366F1', '#06B6D4', '#10B981', '#E2B872']
-    });
+    try {
+      const confettiModule = await import('canvas-confetti');
+      const confetti = confettiModule.default;
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+        colors: ['#6366F1', '#06B6D4', '#10B981', '#E2B872']
+      });
+    } catch {
+      // Graceful fallback if confetti fails to load
+    }
   };
 
   // Track active section using IntersectionObserver (off the main JS scroll thread)
@@ -301,6 +315,8 @@ export function App() {
                     alt="Aqib Munir - Creative Technologist & Full Stack Engineer"
                     className="w-full h-auto object-cover object-center max-h-[500px] sm:max-h-[560px] select-none transform transition-transform duration-700 group-hover:scale-[1.02]"
                     loading="eager"
+                    decoding="async"
+                    fetchPriority="high"
                   />
 
                   {/* Soft bottom blend overlay to dissolve person into page seamlessly */}
@@ -342,7 +358,7 @@ export function App() {
                   className="absolute bottom-6 left-3 sm:-left-6 glass-card backdrop-blur-xl bg-white/90 dark:bg-[#12121a]/85 border border-slate-200/80 dark:border-white/15 py-2 px-3.5 rounded-2xl shadow-xl z-30 flex items-center gap-2.5"
                 >
                   <div className="w-7 h-7 rounded-full overflow-hidden border border-indigo-500/30">
-                    <img src="/assets/person.jpg" alt="Aqib avatar" className="w-full h-full object-cover" />
+                    <img src="/assets/person.jpg" alt="Aqib avatar" className="w-full h-full object-cover" loading="lazy" decoding="async" />
                   </div>
                   <div>
                     <div className="text-xs font-bold text-slate-900 dark:text-white leading-none">
@@ -425,7 +441,7 @@ export function App() {
         </section>
 
         {/* ================= SELECTED CLIENT WORK ================= */}
-        <section id="work" className="py-20 sm:py-28 border-t border-slate-200/80 dark:border-white/5">
+        <section id="work" className="py-20 sm:py-28 border-t border-slate-200/80 dark:border-white/5 content-auto">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-4">
             <div>
               <div className="inline-flex items-center gap-2 text-xs font-mono text-[#E2B872] uppercase tracking-wider mb-2 font-semibold dark:font-normal">
@@ -462,7 +478,7 @@ export function App() {
         </section>
 
         {/* ================= SKILLS & TECH STACK ================= */}
-        <section id="about" className="py-20 sm:py-28 border-t border-slate-200/80 dark:border-white/5">
+        <section id="about" className="py-20 sm:py-28 border-t border-slate-200/80 dark:border-white/5 content-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
 
             {/* Left Column: Philosophy & Bio */}
@@ -522,7 +538,7 @@ export function App() {
         </section>
 
         {/* ================= WORK PROCESS ================= */}
-        <section id="services" className="py-20 sm:py-28 border-t border-slate-200/80 dark:border-white/5">
+        <section id="services" className="py-20 sm:py-28 border-t border-slate-200/80 dark:border-white/5 content-auto">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 text-xs font-mono text-[#E2B872] uppercase tracking-wider mb-2 font-semibold dark:font-normal">
               <Terminal className="w-3.5 h-3.5" />
@@ -550,7 +566,7 @@ export function App() {
         </section>
 
         {/* ================= CONTACT & CLIENT BOOKING ================= */}
-        <section id="contact" className="py-16 sm:py-20 border-t border-slate-200/80 dark:border-white/5">
+        <section id="contact" className="py-16 sm:py-20 border-t border-slate-200/80 dark:border-white/5 content-auto">
           <div className="max-w-4xl mx-auto rounded-3xl glass-card border border-slate-200/80 dark:border-white/15 p-6 sm:p-12 relative overflow-hidden bg-gradient-to-b from-white to-slate-50/90 dark:from-[#12121a]/90 dark:to-[#0c0c10]/95 shadow-xl dark:shadow-2xl">
 
             {/* Ambient Corner Flare */}
@@ -712,9 +728,7 @@ export function App() {
         </div>
 
         {/* Live Local Time */}
-        <div className="font-mono text-[11px] sm:text-xs font-medium text-slate-500 dark:text-zinc-400 tabular-nums">
-          {currentTime || '12:00 PM'}
-        </div>
+        <LiveClock />
 
         <div className="flex items-center gap-6">
           <a href="#home" className="hover:text-slate-900 dark:hover:text-zinc-300 transition-colors">Back to Top</a>
