@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
   Sparkles,
-  ArrowUpRight,
   Menu,
   X,
   Terminal,
@@ -21,7 +20,9 @@ import {
   UtensilsCrossed,
   Sun,
   Moon,
-  Phone
+  Phone,
+  Check,
+  ArrowRight
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { PROJECTS, SKILL_CATEGORIES, WORK_PROCESS, type Project } from './data/portfolio';
@@ -120,42 +121,37 @@ export function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 dark:bg-[#09090b] dark:text-[#fafafa] relative overflow-hidden bg-grid-pattern selection:bg-indigo-500/20 selection:text-indigo-900 dark:selection:bg-indigo-500/30 dark:selection:text-indigo-200 transition-colors duration-300">
+    <div className="min-h-screen bg-white text-slate-900 dark:bg-[#09090b] dark:text-[#fafafa] relative overflow-x-hidden selection:bg-indigo-500/20 selection:text-indigo-900 dark:selection:bg-indigo-500/30 dark:selection:text-indigo-200 transition-colors duration-300">
 
       {/* Background Ambient Glow Orbs */}
-      <div className="fixed top-0 left-1/4 -translate-x-1/2 -z-10 w-[500px] h-[500px] bg-indigo-400/20 dark:bg-indigo-600/15 rounded-full blur-[140px] pointer-events-none" />
+      <div className="fixed top-12 left-1/2 -translate-x-1/2 -z-10 w-[700px] h-[550px] bg-gradient-to-b from-indigo-300/20 via-sky-200/20 to-transparent dark:from-indigo-600/15 dark:via-cyan-600/10 dark:to-transparent rounded-full blur-[140px] pointer-events-none" />
       <div className="fixed bottom-1/4 right-10 -z-10 w-[450px] h-[450px] bg-cyan-400/15 dark:bg-cyan-600/10 rounded-full blur-[130px] pointer-events-none" />
-      <div className="fixed top-1/2 left-2/3 -z-10 w-[350px] h-[350px] bg-emerald-400/15 dark:bg-emerald-600/10 rounded-full blur-[120px] pointer-events-none" />
 
       {/* Navigation Bar */}
-      <header className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 py-4 sm:py-6">
-        <nav className="flex items-center justify-between w-full max-w-5xl px-5 py-3 rounded-full glass-card border border-slate-200/80 dark:border-white/10 backdrop-blur-xl bg-white/80 dark:bg-[#0e0e13]/80 shadow-lg dark:shadow-2xl">
+      <header className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 py-4 sm:py-5">
+        <nav className="flex items-center justify-between w-full max-w-6xl px-6 py-3.5 rounded-full glass-card border border-slate-200/80 dark:border-white/10 backdrop-blur-xl bg-white/80 dark:bg-[#0e0e13]/80 shadow-sm dark:shadow-2xl">
           <a href="#home" className="flex items-center gap-2.5 font-display font-bold text-lg tracking-tight group">
-            <span className="w-8 h-8 rounded-lg bg-gradient-to-tr from-indigo-600 to-cyan-500 flex items-center justify-center text-white text-sm shadow-md shadow-indigo-500/20 group-hover:scale-105 transition-transform">
-              AM
-            </span>
-            <span className="text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-300 transition-colors">Aqib Munir</span>
-            <span className="hidden sm:inline-block text-xs font-mono px-2 py-0.5 rounded-full bg-indigo-50 dark:bg-indigo-500/10 text-indigo-700 dark:text-indigo-400 border border-indigo-200 dark:border-indigo-500/20">
-              Creative Tech
+            <span className="text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-300 transition-colors text-base sm:text-lg">
+              Aqib Munir
             </span>
           </a>
 
           {/* Desktop Nav Links */}
-          <div className="hidden md:flex items-center gap-1 font-medium text-sm text-slate-600 dark:text-zinc-400">
+          <div className="hidden md:flex items-center gap-8 font-medium text-sm text-slate-600 dark:text-zinc-400">
             {[
               { id: 'home', label: 'Home' },
-              { id: 'work', label: 'Selected Work' },
-              { id: 'about', label: 'Skills & Stack' },
+              { id: 'work', label: 'Work' },
+              { id: 'about', label: 'About' },
               { id: 'services', label: 'Process' },
               { id: 'contact', label: 'Contact' },
             ].map((item) => (
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                className={`px-3.5 py-1.5 rounded-full transition-all text-xs lg:text-sm ${
+                className={`transition-colors hover:text-slate-900 dark:hover:text-white ${
                   activeNav === item.id
-                    ? 'text-slate-900 dark:text-white bg-slate-200/80 dark:bg-white/10 shadow-sm border border-slate-300/60 dark:border-white/10 font-semibold'
-                    : 'hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5'
+                    ? 'text-slate-900 dark:text-white font-semibold'
+                    : ''
                 }`}
               >
                 {item.label}
@@ -164,11 +160,11 @@ export function App() {
           </div>
 
           {/* Action CTA & Theme Toggle */}
-          <div className="flex items-center gap-2 sm:gap-3">
+          <div className="flex items-center gap-3">
             {/* Theme Toggle Button */}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-full text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/10 transition-colors border border-transparent hover:border-slate-200 dark:hover:border-white/10"
+              className="p-2 rounded-full text-slate-600 dark:text-zinc-400 hover:text-slate-900 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/10 transition-colors"
               aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
               title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
             >
@@ -181,10 +177,9 @@ export function App() {
 
             <a
               href="#contact"
-              className="relative inline-flex items-center justify-center gap-2 px-4 py-2 text-xs sm:text-sm font-semibold text-white transition-all bg-gradient-to-r from-indigo-600 via-indigo-500 to-cyan-500 rounded-full hover:shadow-lg hover:shadow-indigo-500/25 hover:scale-[1.02] active:scale-[0.98]"
+              className="inline-flex items-center justify-center px-5 py-2 text-xs sm:text-sm font-semibold text-white bg-slate-900 dark:bg-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-zinc-200 rounded-full transition-all hover:shadow-md hover:scale-[1.02] active:scale-[0.98]"
             >
-              <span>Hire Me</span>
-              <ArrowUpRight className="w-4 h-4" />
+              <span>Email Me</span>
             </a>
 
             {/* Mobile menu toggle */}
@@ -230,75 +225,169 @@ export function App() {
         )}
       </AnimatePresence>
 
-      <main className="max-w-6xl px-4 sm:px-6 mx-auto pt-28 sm:pt-36 pb-6">
+      <main className="max-w-7xl px-4 sm:px-6 lg:px-8 mx-auto pt-28 sm:pt-32 pb-12">
 
-        {/* ================= HERO SECTION ================= */}
-        <section id="home" className="relative pt-6 pb-20 sm:pb-32 flex flex-col items-center text-center">
+        {/* ================= HERO SECTION (REFERENCE MATCHING) ================= */}
+        <section id="home" className="relative pt-4 pb-16 sm:pb-24 overflow-hidden">
 
-          {/* Live Availability Badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full glass-card border border-indigo-200 dark:border-indigo-500/20 bg-indigo-50/80 dark:bg-indigo-950/30 text-indigo-700 dark:text-indigo-300 text-xs sm:text-sm font-mono mb-6 shadow-sm"
-          >
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-            </span>
-            <span>Available for Q2/Q3 Freelance & Client Projects</span>
-          </motion.div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center min-h-[560px] lg:min-h-[620px] relative">
 
-          {/* Main Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="font-display text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight max-w-4xl text-slate-900 dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-b dark:from-white dark:via-zinc-200 dark:to-zinc-500 leading-[1.1] mb-6"
-          >
-            Turning complex code into <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-cyan-600 to-emerald-600 dark:from-indigo-400 dark:via-cyan-400 dark:to-emerald-400">beautiful, brand-driven</span> web experiences.
-          </motion.h1>
-
-          {/* Subtitle */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-base sm:text-xl text-slate-600 dark:text-zinc-400 max-w-2xl mx-auto mb-10 leading-relaxed font-light"
-          >
-            I engineer bespoke digital platforms, conversion-focused websites, and high-velocity web applications that help ambitious founders and businesses dominate their market.
-          </motion.p>
-
-          {/* Primary Action Buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-wrap items-center justify-center gap-4 w-full max-w-md mx-auto"
-          >
-            <a
-              href="#work"
-              className="flex-1 min-w-[160px] inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-500 rounded-xl transition-all shadow-lg shadow-indigo-600/20 dark:shadow-indigo-600/30 hover:scale-[1.02] active:scale-[0.98]"
+            {/* Left Column: Availability & Headline */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="lg:col-span-4 z-20 flex flex-col justify-center text-left order-2 lg:order-1"
             >
-              <span>Explore Client Work</span>
-              <ChevronRight className="w-4 h-4" />
-            </a>
+              {/* Availability badge with green pulsing dot */}
+              <div className="inline-flex items-center gap-2 text-xs sm:text-sm text-slate-700 dark:text-zinc-300 font-medium mb-4">
+                <span className="relative flex h-2.5 w-2.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                </span>
+                <span>2 projects left in Q2</span>
+              </div>
 
-            <a
-              href="#contact"
-              className="flex-1 min-w-[160px] inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold text-slate-700 dark:text-zinc-300 hover:text-slate-900 dark:hover:text-white glass-card border border-slate-200/80 dark:border-white/10 hover:border-slate-300 dark:hover:border-white/20 rounded-xl transition-all hover:bg-slate-100/80 dark:hover:bg-white/5"
+              {/* Punchy Hero Headline */}
+              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-[42px] font-bold text-slate-900 dark:text-white leading-[1.18] tracking-tight mb-6">
+                Aqib is solving problems through strategic design and compelling visuals
+              </h1>
+
+              {/* Quick tags */}
+              <div className="flex flex-wrap gap-2 pt-2">
+                <span className="text-xs px-3 py-1 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200/80 dark:border-white/10 text-slate-700 dark:text-zinc-300 font-medium">
+                  Full-Stack Architecture
+                </span>
+                <span className="text-xs px-3 py-1 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200/80 dark:border-white/10 text-slate-700 dark:text-zinc-300 font-medium">
+                  UI/UX Craft
+                </span>
+              </div>
+            </motion.div>
+
+            {/* Center Column: Prominent Person Portrait with soft bottom fade & floating badges */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+              className="lg:col-span-4 relative flex justify-center items-center order-1 lg:order-2"
             >
-              <span>Start a Project</span>
-              <ArrowUpRight className="w-4 h-4" />
-            </a>
-          </motion.div>
+              <div className="relative w-full max-w-[340px] sm:max-w-[380px] lg:max-w-[420px] mx-auto group">
 
-          {/* Social Proof & Metrics Bento Strip */}
+                {/* Ambient Halo behind portrait */}
+                <div className="absolute inset-0 bg-gradient-to-b from-indigo-500/20 via-sky-400/15 to-transparent dark:from-indigo-600/30 dark:via-cyan-500/20 dark:to-transparent rounded-full blur-3xl scale-95 pointer-events-none" />
+
+                {/* Portrait Container */}
+                <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-slate-200/60 dark:border-white/10 bg-slate-100/50 dark:bg-[#121218]/50">
+                  <img
+                    src="/assets/person.jpg"
+                    alt="Aqib Munir - Creative Technologist & Full Stack Engineer"
+                    className="w-full h-auto object-cover object-center max-h-[500px] sm:max-h-[560px] select-none transform transition-transform duration-700 group-hover:scale-[1.02]"
+                    loading="eager"
+                  />
+
+                  {/* Soft bottom blend overlay to dissolve person into page seamlessly */}
+                  <div className="absolute bottom-0 inset-x-0 h-36 sm:h-44 bg-gradient-to-t from-white via-white/80 to-transparent dark:from-[#09090b] dark:via-[#09090b]/80 dark:to-transparent pointer-events-none" />
+                </div>
+
+                {/* Floating Glassmorphism Badge 1 - Top Right (Documents/Tech stack - Reference 2 style) */}
+                <motion.div
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                  className="absolute -top-3 -right-3 sm:-right-6 glass-card backdrop-blur-xl bg-white/90 dark:bg-[#12121a]/85 border border-slate-200/80 dark:border-white/15 p-3 rounded-2xl shadow-xl z-30 hidden sm:block"
+                >
+                  <div className="text-[10px] font-mono text-slate-500 dark:text-zinc-400 uppercase tracking-wider mb-1.5 flex items-center gap-1">
+                    <Sparkles className="w-3 h-3 text-amber-500" />
+                    <span>STACK</span>
+                  </div>
+                  <div className="space-y-1 text-xs font-semibold text-slate-800 dark:text-zinc-200">
+                    <div className="flex items-center gap-1.5">
+                      <Check className="w-3.5 h-3.5 text-emerald-500" />
+                      <span>Next.js 15 & React</span>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <Check className="w-3.5 h-3.5 text-emerald-500" />
+                      <span>Tailwind CSS</span>
+                    </div>
+                    <div className="flex items-center gap-1.5">
+                      <Check className="w-3.5 h-3.5 text-emerald-500" />
+                      <span>TypeScript</span>
+                    </div>
+                  </div>
+                </motion.div>
+
+                {/* Floating Glassmorphism Badge 2 - Bottom Left Profile Pill (Reference 3 style) */}
+                <motion.div
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  className="absolute bottom-6 left-3 sm:-left-6 glass-card backdrop-blur-xl bg-white/90 dark:bg-[#12121a]/85 border border-slate-200/80 dark:border-white/15 py-2 px-3.5 rounded-2xl shadow-xl z-30 flex items-center gap-2.5"
+                >
+                  <div className="w-7 h-7 rounded-full overflow-hidden border border-indigo-500/30">
+                    <img src="/assets/person.jpg" alt="Aqib avatar" className="w-full h-full object-cover" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-bold text-slate-900 dark:text-white leading-none">
+                      @aqibmunir
+                    </div>
+                    <div className="text-[10px] text-slate-500 dark:text-zinc-400 mt-0.5">
+                      Full-Stack Engineer
+                    </div>
+                  </div>
+                </motion.div>
+
+              </div>
+            </motion.div>
+
+            {/* Right Column: Bio & CTA */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="lg:col-span-4 z-20 flex flex-col justify-center text-left order-3"
+            >
+              <p className="text-sm sm:text-base text-slate-600 dark:text-zinc-300 leading-relaxed mb-8">
+                As a digital product designer and full-stack engineer with a strong focus on visual design, performant web applications, and Framer/Next.js platforms, he collaborates closely with founders and teams to craft seamless, user-centered experiences. A reliable partner in bringing ideas to life.
+              </p>
+
+              <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
+                <a
+                  href="#contact"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 text-sm font-semibold text-white bg-slate-900 hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-zinc-200 rounded-full transition-all shadow-lg hover:shadow-xl hover:scale-[1.02] active:scale-[0.98]"
+                >
+                  <span>Email Me</span>
+                  <ArrowRight className="w-4 h-4" />
+                </a>
+
+                <a
+                  href="#work"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-semibold text-slate-800 dark:text-zinc-200 hover:text-slate-900 dark:hover:text-white glass-card border border-slate-200/80 dark:border-white/10 hover:border-slate-300 dark:hover:border-white/20 rounded-full transition-all"
+                >
+                  <span>View Projects</span>
+                  <ChevronRight className="w-4 h-4" />
+                </a>
+              </div>
+
+              {/* Direct Quick Contact Pill */}
+              <div className="mt-8 pt-6 border-t border-slate-200/80 dark:border-white/10 flex items-center justify-between text-xs text-slate-500 dark:text-zinc-400">
+                <span className="font-mono">{email}</span>
+                <button
+                  onClick={handleCopyEmail}
+                  className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 hover:underline"
+                >
+                  {copiedEmail ? 'Copied!' : 'Copy Email'}
+                </button>
+              </div>
+            </motion.div>
+
+          </div>
+
+          {/* Metrics / Proof Bento Strip */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 w-full max-w-4xl mt-16 sm:mt-20 text-left"
+            className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 w-full mt-14 sm:mt-16 text-left"
           >
             {[
               { label: 'Avg. Lighthouse Score', val: '99/100', desc: 'Zero layout shift, instant TTI' },
@@ -307,7 +396,7 @@ export function App() {
               { label: 'Client Satisfaction', val: '100%', desc: 'Bespoke design, zero template slop' }
             ].map((stat, i) => (
               <div key={i} className="p-4 sm:p-5 rounded-2xl glass-card border border-slate-200/80 dark:border-white/5 hover:border-slate-300 dark:hover:border-white/10 transition-colors">
-                <div className="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-1 tracking-tight dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-white dark:to-zinc-300">
+                <div className="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-1 tracking-tight">
                   {stat.val}
                 </div>
                 <div className="text-xs font-semibold text-slate-700 dark:text-zinc-300 mb-1">{stat.label}</div>
@@ -318,7 +407,7 @@ export function App() {
         </section>
 
         {/* ================= SELECTED CLIENT WORK ================= */}
-        <section id="work" className="py-20 sm:py-28">
+        <section id="work" className="py-20 sm:py-28 border-t border-slate-200/80 dark:border-white/5">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-4">
             <div>
               <div className="inline-flex items-center gap-2 text-xs font-mono text-indigo-600 dark:text-indigo-400 uppercase tracking-wider mb-2 font-semibold dark:font-normal">
@@ -355,7 +444,7 @@ export function App() {
         </section>
 
         {/* ================= SKILLS & TECH STACK ================= */}
-        <section id="about" className="py-20 sm:py-28 border-t border-slate-200 dark:border-white/5">
+        <section id="about" className="py-20 sm:py-28 border-t border-slate-200/80 dark:border-white/5">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
 
             {/* Left Column: Philosophy & Bio */}
@@ -415,7 +504,7 @@ export function App() {
         </section>
 
         {/* ================= WORK PROCESS ================= */}
-        <section id="services" className="py-20 sm:py-28 border-t border-slate-200 dark:border-white/5">
+        <section id="services" className="py-20 sm:py-28 border-t border-slate-200/80 dark:border-white/5">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <div className="inline-flex items-center gap-2 text-xs font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-wider mb-2 font-semibold dark:font-normal">
               <Terminal className="w-3.5 h-3.5" />
@@ -443,7 +532,7 @@ export function App() {
         </section>
 
         {/* ================= CONTACT & CLIENT BOOKING ================= */}
-        <section id="contact" className="py-16 sm:py-20 border-t border-slate-200 dark:border-white/5">
+        <section id="contact" className="py-16 sm:py-20 border-t border-slate-200/80 dark:border-white/5">
           <div className="max-w-4xl mx-auto rounded-3xl glass-card border border-slate-200/80 dark:border-white/15 p-6 sm:p-12 relative overflow-hidden bg-gradient-to-b from-white to-slate-50/90 dark:from-[#12121a]/90 dark:to-[#0c0c10]/95 shadow-xl dark:shadow-2xl">
 
             {/* Ambient Corner Flare */}
@@ -582,7 +671,7 @@ export function App() {
 
                     <button
                       type="submit"
-                      className="w-full py-3.5 px-6 rounded-xl bg-gradient-to-r from-indigo-600 via-indigo-500 to-cyan-500 hover:from-indigo-500 hover:to-cyan-400 text-white font-semibold text-sm transition-all shadow-lg shadow-indigo-600/25 hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2"
+                      className="w-full py-3.5 px-6 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-zinc-200 text-white font-semibold text-sm transition-all shadow-md hover:scale-[1.01] active:scale-[0.99] flex items-center justify-center gap-2"
                     >
                       <span>Send Project Inquiry</span>
                       <Send className="w-4 h-4" />
@@ -598,7 +687,7 @@ export function App() {
       </main>
 
       {/* ================= FOOTER ================= */}
-      <footer className="border-t border-slate-200 dark:border-white/10 py-6 px-4 max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-zinc-500">
+      <footer className="border-t border-slate-200 dark:border-white/10 py-8 px-4 max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500 dark:text-zinc-500">
         <div className="flex items-center gap-2">
           <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
           <span>© {new Date().getFullYear()} Aqib Munir. All rights reserved.</span>
@@ -716,7 +805,7 @@ export function App() {
                     href={selectedProject.url}
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-500 text-white font-semibold text-xs sm:text-sm hover:opacity-95 transition-opacity shadow-lg shadow-indigo-500/25"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-semibold text-xs sm:text-sm hover:opacity-95 transition-opacity shadow-lg"
                   >
                     <span>Visit Live Website</span>
                     <ExternalLink className="w-4 h-4" />
