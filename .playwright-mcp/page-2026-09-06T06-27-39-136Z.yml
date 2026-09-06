@@ -1,0 +1,116 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "Portfolio" [ref=e4]:
+        - /url: "#"
+      - generic [ref=e5]:
+        - list [ref=e6]:
+          - listitem [ref=e7]:
+            - link "View Work Work" [ref=e8]:
+              - /url: "#work"
+              - text: View Work
+              - generic [ref=e9]: Work
+          - listitem [ref=e10]:
+            - link "Learn More About" [ref=e11]:
+              - /url: "#about"
+              - text: Learn More
+              - generic [ref=e12]: About
+          - listitem [ref=e13]:
+            - link "Get in Touch Contact" [ref=e14]:
+              - /url: "#contact"
+              - text: Get in Touch
+              - generic [ref=e15]: Contact
+        - button "Toggle music" [ref=e16] [cursor=pointer]
+        - button "Toggle theme" [ref=e26] [cursor=pointer]
+  - generic [ref=e35]:
+    - generic [ref=e36]:
+      - heading "S o f t w a r e D e v e l o p e r" [level=1] [ref=e37]:
+        - generic [ref=e38]:
+          - generic [ref=e39]: S
+          - generic [ref=e40]: o
+          - generic [ref=e41]: f
+          - generic [ref=e42]: t
+          - generic [ref=e43]: w
+          - generic [ref=e44]: a
+          - generic [ref=e45]: r
+          - generic [ref=e46]: e
+          - generic [ref=e47]: D
+          - generic [ref=e48]: e
+          - generic [ref=e49]: v
+          - generic [ref=e50]: e
+          - generic [ref=e51]: l
+          - generic [ref=e52]: o
+          - generic [ref=e53]: p
+          - generic [ref=e54]: e
+          - generic [ref=e55]: r
+      - paragraph [ref=e56]: Backend developer & full-stack builder. I create web applications and solve complex problems with clean, efficient code.
+    - generic [ref=e57]: Scroll
+  - generic [ref=e61]:
+    - heading "Selected Work" [level=2] [ref=e62]
+    - generic [ref=e63]:
+      - article [ref=e64] [cursor=pointer]:
+        - link [ref=e65]:
+          - /url: https://am-projects.onrender.com/
+          - img "Wanderlust Project" [ref=e67]
+          - generic [ref=e68]:
+            - heading "Wanderlust" [level=3] [ref=e69]
+            - paragraph [ref=e70]: Full Stack Web App • Node.js, Express, MongoDB
+            - paragraph [ref=e71]: A comprehensive room rental platform featuring user authentication, property listings, reviews, and interactive maps.
+      - article [ref=e72] [cursor=pointer]:
+        - img "Portfolio Website" [ref=e74]
+        - generic [ref=e75]:
+          - heading "Portfolio Website" [level=3] [ref=e76]
+          - paragraph [ref=e77]: Frontend Development • HTML, CSS, JavaScript
+          - paragraph [ref=e78]: Modern, responsive portfolio with smooth animations and interactive hover effects.
+      - article [ref=e79] [cursor=pointer]:
+        - img "Web Projects" [ref=e81]
+        - generic [ref=e82]:
+          - heading "More Projects" [level=3] [ref=e83]
+          - paragraph [ref=e84]: Various Technologies • React, APIs, Databases
+          - paragraph [ref=e85]: Exploring different frameworks and building solutions to real-world problems.
+  - generic [ref=e88]:
+    - heading "About" [level=2] [ref=e89]
+    - generic [ref=e91]:
+      - img "Profile Picture" [ref=e93]
+      - paragraph [ref=e94]: Aqib Munir
+      - paragraph [ref=e95]: Currently studying at UE Multan Campus, I'm dedicated to building innovative web applications and exploring the endless possibilities of technology. My journey in software development combines creativity with problem-solving, focusing on creating user-friendly and efficient solutions.
+      - generic [ref=e96]:
+        - heading "Technical Skills" [level=3] [ref=e97]
+        - generic [ref=e98]:
+          - generic [ref=e99]: JavaScript
+          - generic [ref=e100]: Node.js
+          - generic [ref=e101]: Express
+          - generic [ref=e102]: MongoDB
+          - generic [ref=e103]: React
+          - generic [ref=e104]: HTML/CSS
+          - generic [ref=e105]: Git
+          - generic [ref=e106]: REST APIs
+  - generic [ref=e108]:
+    - heading "Let's Connect" [level=2] [ref=e109]
+    - generic [ref=e110]:
+      - link "Send Email contactaqib7@gmail.com" [ref=e111]:
+        - /url: mailto:dev@example.com
+        - text: Send Email
+        - generic [ref=e112]: contactaqib7@gmail.com
+      - generic [ref=e113]:
+        - link "Code GitHub" [ref=e114]:
+          - /url: https://github.com/aqibmunir8
+          - text: Code
+          - generic [ref=e115]: GitHub
+        - link "Connect LinkedIn" [ref=e116]:
+          - /url: https://www.linkedin.com/in/aqibmunir/
+          - text: Connect
+          - generic [ref=e117]: LinkedIn
+        - link "Follow Twitter" [ref=e118]:
+          - /url: https://www.linkedin.com/in/aqibmunir/
+          - text: Follow
+          - generic [ref=e119]: Twitter
+        - link "View Projects" [ref=e120]:
+          - /url: https://am-projects.onrender.com/
+          - text: View
+          - generic [ref=e121]: Projects
+  - contentinfo [ref=e122]:
+    - paragraph [ref=e123]: 11:27 AM
+    - generic [ref=e125]:
+      - paragraph [ref=e126]: © 2025 Aqib Munir. Built with passion.
+      - paragraph [ref=e127]: Pakistan

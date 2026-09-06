@@ -47,6 +47,16 @@
 }
 
 /* Glass Card styling with light and dark mode variants */
+.portfolio-navbar {
+  background: linear-gradient(rgba(255, 255, 255, 0.95), transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.dark .portfolio-navbar {
+  background: linear-gradient(rgba(0, 0, 0, 0.95), transparent);
+}
+
 .glass-card {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(16px);

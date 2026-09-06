@@ -128,8 +128,8 @@ export function App() {
       <div className="fixed bottom-1/4 right-10 -z-10 w-[450px] h-[450px] bg-cyan-400/15 dark:bg-cyan-600/10 rounded-full blur-[130px] pointer-events-none" />
 
       {/* Navigation Bar */}
-      <header className="fixed top-0 left-0 right-0 z-50 flex justify-center px-4 py-4 sm:py-5">
-        <nav className="flex items-center justify-between w-full max-w-6xl px-6 py-3.5 rounded-full glass-card border border-slate-200/80 dark:border-white/10 backdrop-blur-xl bg-white/80 dark:bg-[#0e0e13]/80 shadow-sm dark:shadow-2xl">
+      <header className="fixed top-0 left-0 right-0 z-50 py-4 sm:py-5 portfolio-navbar">
+        <nav className="flex items-center justify-between w-full max-w-6xl mx-auto px-6">
           <a href="#home" className="flex items-center gap-2.5 font-display font-bold text-lg tracking-tight group">
             <span className="text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-300 transition-colors text-base sm:text-lg">
               Aqib Munir
