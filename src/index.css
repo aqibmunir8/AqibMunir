@@ -55,13 +55,13 @@
 
 /* Glass Card styling with GPU containment */
 .portfolio-navbar {
-  background: linear-gradient(rgba(255, 255, 255, 0.95), transparent);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .dark .portfolio-navbar {
-  background: linear-gradient(rgba(0, 0, 0, 0.95), transparent);
+  background: rgba(9, 9, 11, 0.7);
 }
 
 .glass-card {
